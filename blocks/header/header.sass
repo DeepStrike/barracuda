@@ -1,7 +1,39 @@
 .header
+  padding-top: 38px
+  &__container
+    +container()
 
-	&__container
-		+container()
+  &__logo
+    margin-top: -54px
 
-	&-nav
-		display: flex
+  &-nav
+    display: flex
+    flex-wrap: wrap
+    &__item
+      flex-grow: 1
+      flex-shrink: 1
+      flex-basis: auto
+      white-space: nowrap
+    &__link
+      position: relative
+      padding-right: 17px
+      padding-left: 17px 
+      color: $header-menu-color
+      font-size: 14px
+      text-decoration: none
+      text-transform: uppercase
+    &__link::after
+      content: ""
+      display: inline-block
+      position: absolute;
+      top: 4px;
+      right: 3px;
+      vertical-align: middle
+      line-height: 14px
+      border-style: solid
+      border-color: $user-panel-color
+      border-width: 0 1px 1px 0
+      padding: 3px
+      transform: rotate(45deg)
+
+
