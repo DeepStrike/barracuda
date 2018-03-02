@@ -1,10 +1,48 @@
 include _assets/bemto/bemto
 - set_bemto_settings({ modifier: "--" })
 
-inlcude head/head
+include head/head
+include icon/icon
+include user/user
 include header/header
-
+include promo/promo
 doctype html
 html(lang="ua")
 
-    block head
+  block head
+    +head({
+      "title": "Barracuda",
+      "author": "Viktor Kot",
+      "description": "Test"
+    })
+
+    +b.BODY.page
+      +e.DIV.wrap
+        +user()
+        block header
+          +header({
+            "menu": [
+              {
+                "text": "Продукція",
+                "href": "index.html"
+              },
+              {
+                "text": "Готові рішення",
+                "href": "index.html"
+              },
+              {
+                "text": "Підтримка",
+                "href": "index.html"
+              },
+              {
+                "text": "Система",
+                "href": "index.html"
+              },
+              {
+                "text": "Контакти",
+                "href": "index.html"
+              }
+            ]
+          })
+        block content
+          +promo()

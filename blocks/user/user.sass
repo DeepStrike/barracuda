@@ -1,0 +1,35 @@
+.user-panel
+  padding-top: 18px
+  &__container
+    +container()
+    justify-content: flex-end
+
+  &-item
+    display: flex
+    flex-shrink: 1
+    flex-grow: 0
+    flex-basis: auto
+    margin-left: 30px
+    font-size: 12px
+    &__link
+      align-self: center
+      color: #717274
+      text-decoration: none
+    &__link--dotted
+      border-bottom: 1px dashed
+    &__link--big
+      text-transform: uppercase
+  .icon
+    &--avatar 
+      margin-right: 11px
+      width: 16px
+      height: 20px
+    &--magnifying-glass
+      margin-right: 26px
+      width: 20px
+      height: 20px
+      fill: #d60202
+    &--worldwide
+      margin-right: 8px
+      width: 16px
+      height: 16px

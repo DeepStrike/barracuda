@@ -1,0 +1,14 @@
+mixin header(data)
+  +b.HEADER.header
+    +e.DIV.container
+      +e.DIV.logo
+        +b.A.logo(href='#')
+          +e.IMG.img(src='img/logo/barracuda_logo.png')
+      +e.DIV.nav
+        +b.NAV.header-nav
+          each item in data.menu
+            +e.DIV.item
+              +e.A.link(href=item.href)= item.text
+      +e.DIV.cart
+        +b.I.icon(class="--cart")
+        |0 шт
