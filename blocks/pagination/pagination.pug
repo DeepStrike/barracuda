@@ -1,0 +1,10 @@
+mixin pagination() 
+  -
+    var n = 0
+  
+  +b.NAV.pagination
+    while n < 8
+      +e.BUTTON.item
+      if n === 2
+        +e.BUTTON.item(class="--current")
+

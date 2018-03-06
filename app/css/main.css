@@ -663,7 +663,7 @@ html {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .promo__col-left {
+  .promo__messages {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -683,11 +683,14 @@ html {
     max-width: 50%;
     padding-left: 80px;
     padding-top: 30px; }
-  .promo__col-right {
+  .promo__img-wrap {
     -webkit-flex-basis: 30%;
         -ms-flex-preferred-size: 30%;
             flex-basis: 30%;
     max-width: 30%; }
+  .promo img {
+    max-width: 396px;
+    height: 519px; }
   .promo__title {
     font-size: 36px;
     letter-spacing: 2px;
@@ -700,9 +703,3 @@ html {
     font-size: 14px;
     line-height: 26px;
     color: #8da5ba; }
-  .promo__img-wrap {
-    width: 100%;
-    text-align: left; }
-    .promo__img-wrap img {
-      max-width: 396px;
-      height: 519px; }
