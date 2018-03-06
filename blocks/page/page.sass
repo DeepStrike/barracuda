@@ -19,3 +19,46 @@ html
 
 .icon
   display: inline-block
+
+.btn 
+  display: inline-block
+  font: inherit
+  border-radius: 0
+  user-select: none
+  touch-action: manipulation
+  position: relative
+  max-width: 180px
+  padding: 19px 40px 19px 25px
+  box-sizing: border-box
+  font-weight: 500
+  font-size: 14px
+  // line-height: 60px
+  vertical-align: middle
+  text-align: center
+  text-transform: uppercase
+  white-space: normal
+  word-wrap: normal
+  border: 3px solid #302683
+  &--wide 
+    width: 180px
+.btn__arrow-left
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  margin-top: 2px;
+  border-width: 1px 1px 0 0;
+  border-style: solid;
+  margin-left: 10px;
+  transform: rotate(45deg)
+  &::before
+    content: "";
+    right: 0;
+    top: -1px;
+    position: absolute;
+    height: 1px;
+    box-shadow: inset 0 0 0 32px
+    transform: rotate(-45deg)
+    width: 15px
+    transform-origin: right top

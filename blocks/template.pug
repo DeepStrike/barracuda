@@ -3,6 +3,7 @@ include _assets/bemto/bemto
 
 include head/head
 include icon/icon
+include line-reveal/line-reveal
 include user/user
 include header/header
 include promo/promo
@@ -18,6 +19,7 @@ html(lang="ua")
 
     +b.BODY.page
       +e.DIV.wrap
+        +line-reveal()
         +user()
         block header
           +header({
@@ -46,3 +48,7 @@ html(lang="ua")
           })
         block content
           +promo()
+        block scripts
+        // build:js js/main.js
+        script( src="js/main.js")
+        // endbuild

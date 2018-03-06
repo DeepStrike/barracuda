@@ -1,0 +1,64 @@
+.line-reveal
+  // display: none
+  overflow: hidden
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  z-index: -10
+
+.line-reveal__elem
+  width: 120%
+  height: 3px
+  overflow: hidden
+  position: absolute
+  opacity: 0.3
+  &.show
+    .overlay 
+      animation: wipe 3s ease
+      animation-iteration-count: 1
+      animation-direction: alternate
+      animation-fill-mode: forwards
+      animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000)
+      // background: #f6303e;
+  .overlay
+    background: #fff
+    height: 10px
+    position: absolute
+    top: -5px
+    width: 100%
+    transform-origin: 100% 0
+
+  .line
+    border: 0.5px solid
+    backface-visibility: hidden
+
+.line-reveal__elem--line-a
+  left: -2%
+  top: 60%
+  transform-origin: 0 0
+  transform: rotate(-8deg)
+  .line
+    border-color: #f6303e;
+
+.line-reveal__elem--line-b
+  left: -2%
+  top: 55%
+  transform-origin: 0 0
+  transform: rotate(-30deg)
+  .line
+    border-color: #f6303e;
+
+.line-reveal__elem--line-c
+  left: -2%
+  top: 80%
+  transform-origin: 0 0
+  transform: rotate(-15deg)
+  .line
+    border-width: 2px
+    border-color: #f6303e;
+
+@keyframes wipe
+  to
+    transform: scaleX(0)

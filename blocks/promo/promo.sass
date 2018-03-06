@@ -1,3 +1,27 @@
 .promo
-	&__container
-		+container()
+  padding-top: 76px
+  &__container
+    +container()
+    justify-content: center
+
+  &__col-left
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    width: 50%
+    padding-left: 80px
+    padding-top: 30px
+  &__col-right
+    width: 30%
+  &__title
+    font-size: 36px
+    color: $font-color-light-red
+    text-transform: uppercase
+
+  &__descr
+    width: 329px
+    margin: 0
+    font-size: 14px
+    line-height: 26px
+    color: #8da5ba
+

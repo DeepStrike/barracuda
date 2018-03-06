@@ -23,6 +23,26 @@
   <!-- endbuild-->
   <body class="page">
     <div class="page__wrap">
+      <div class="line-reveal">
+        <div class="line-reveal__elem line-reveal__elem--line-a">
+          <div class="overlay">
+          </div>
+          <div class="line">
+          </div>
+        </div>
+        <div class="line-reveal__elem line-reveal__elem--line-b">
+          <div class="overlay">
+          </div>
+          <div class="line">
+          </div>
+        </div>
+        <div class="line-reveal__elem line-reveal__elem--line-c">
+          <div class="overlay">
+          </div>
+          <div class="line">
+          </div>
+        </div>
+      </div>
       <div class="user-panel">
         <div class="user-panel__container">
           <div class="user-panel-item">
@@ -59,36 +79,32 @@
               <div class="header-nav__item"><a class="header-nav__link" href="index.html">Контакти</a>
               </div>
             </nav>
-          </div>
-          <div class="header__cart"><i class="icon icon--cart"></i>0 шт
-          </div>
+          </div><a class="header__cart" href="#">
+          <svg class="icon icon--shopping-cart ">
+            <use xlink:href="/img/icons/symbol/sprite.svg#shopping-cart"></use>
+          </svg>0 шт</a>
         </div>
       </header>
       <section class="promo">
         <div class="promo__container">
-          <h2 class="promo__title">
-             Ajax streetsiren
-          </h2>
-          <p class="promo__descr">Працює на відстані до 2000м 
-          </p>
-          <div class="promo__btn">
-            <button class="btn btn--promo">Детальніше
-            </button>
+          <div class="promo__col-left">
+            <h2 class="promo__title">
+               Ajax streetsiren
+            </h2>
+            <p class="promo__descr">Працює на відстані до 2000 метрів від Ajax Hub на відкритому просторі або на декількох поверхах бізнес-центру 
+            </p>
+            <div class="promo__btn"><a class="btn btn--wide">Детальніше<i class="btn__arrow-left"></i></a>
+            </div>
           </div>
-          <div class="promo__img"><img class="img" src="/img/promo.jpg" alt="Ajax hub" title=""/>
-          </div>
-          <div class="indicators">
-            <div class="indicators__indicator">
-            </div>
-            <div class="indicators__indicator">
-            </div>
-            <div class="indicators__indicator">
-            </div>
-            <div class="indicators__indicator indicators__indicator--big">
+          <div class="promo__col-right">
+            <div class="promo__img"><img class="img" src="/img/hub.png" alt="Ajax hub" title=""/>
             </div>
           </div>
         </div>
       </section>
+      <!-- build:js js/main.js-->
+      <script src="js/main.js"></script>
+      <!-- endbuild-->
     </div>
   </body>
 </html>

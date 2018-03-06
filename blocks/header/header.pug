@@ -9,6 +9,6 @@ mixin header(data)
           each item in data.menu
             +e.DIV.item
               +e.A.link(href=item.href)= item.text
-      +e.DIV.cart
-        +b.I.icon(class="--cart")
+      +e.A.cart(href="#")
+        +icon("shopping-cart")
         |0 шт
