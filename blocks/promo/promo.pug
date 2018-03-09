@@ -1,18 +1,19 @@
-mixin promo()
+mixin promo(data)
   +b.SECTION.promo
     +e.DIV.container
       +e.DIV.messages
-        +e.H2.title 
-          |Ajax streetsiren
-        +e.P.descr Працює на відстані до 2000 метрів від Ajax Hub на відкритому просторі або на декількох поверхах бізнес-центру 
+        +e.H2.title= data.title
+        +e.P.descr= data.text
         +e.DIV.btn
-          +b.A.btn(class="--wide --gradient --color") Детальніше
+          +b.A.btn(class="--wide --gradient --color")= data.btn
             +e.I.arrow-left
       +e.DIV.img-wrap
         +b.IMG(src="/img/hub.png" alt="Ajax hub")
-    //- +b.DIV.indicators
-    //-   +e.DIV.indicator
-    //-   +e.DIV.indicator
-    //-   +e.DIV.indicator
-    //-   +e.DIV.indicator(class="--big")
+      - var n= 0
+      +b.NAV.pagination(class="--wide")
+        while n++ < data.numbersIndicator
+          +e.BUTTON.item 
+          if n === 2
+            +e.BUTTON.item(class="--current")
+
 

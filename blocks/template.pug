@@ -7,7 +7,7 @@ include line-reveal/line-reveal
 include user/user
 include header/header
 include promo/promo
-include pagination/pagination
+include product/product
 
 doctype html
 html(lang="ua")
@@ -49,7 +49,40 @@ html(lang="ua")
             ]
           })
         block content
-          +promo()
+          +promo({
+            "title": "ajax StreetSiren",
+
+            "text": "Працює на відстані до 2000 метрів від Ajax Hub на відкритому просторі або на декількох поверхах бізнес-центру",
+
+            "btn": "детальніше",
+            "numbersIndicator": 5
+          })
+          +product({
+            "title": "товари",
+            "nametrash":  "В кошик",
+            "details": "Детальніше",
+            "subtitle": "показати усі",
+          }, 
+          [{
+            "srcImg": "img/product/device_1.png",
+            "cardTitle": "Suprema Biostation L2",
+            "cardDescription": "BioStation A2 нашпигований найкращим у світі процесором на 4 ядра, що забеспечує найкращий у світі."
+          },
+          {
+            "srcImg": "img/product/device_2.png",
+            "cardTitle": "Suprema BioEntry Plus",
+            "cardDescription": "BioStation A2 нашпигований найкращим у світі процесором на 4 ядра, що забеспечує найкращий у світі."
+          },
+          {
+            "srcImg": "img/product/device_3.png",
+            "cardTitle": "Suprema Facestation 2",
+            "cardDescription": "BioStation A2 нашпигований найкращим у світі процесором на 4 ядра, що забеспечує найкращий у світі."
+          },
+          {
+            "srcImg": "img/product/device_4.png",
+            "cardTitle": "Suprema Xpass S2",
+            "cardDescription": "BioStation A2 нашпигований найкращим у світі процесором на 4 ядра, що забеспечує найкращий у світі."
+          }])
         block scripts
         // build:js js/main.js
         script( src="js/main.js")

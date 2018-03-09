@@ -19,6 +19,19 @@ html
 
 .icon
   display: inline-block
+  &--header-cart // Style for header 
+    width: 17px
+    height: 17px
+    margin-right: 12px;
+    fill: #d60202
+    vertical-align: middle
+  &--action-card // Style for card
+    position: absolute
+    fill: #ffffff
+    width: 17px
+    height: 17px
+    left: 23px
+    top: 18px
 
 .btn 
   display: inline-block
@@ -67,3 +80,69 @@ html
     transform: rotate(-45deg)
     width: 15px
     transform-origin: right top
+
+.pagination
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: flex-end
+  // background: black
+  &--wide
+    flex-basis: 20%
+    max-width: 20%
+    margin-top: -100px
+  &__item
+    line-height: 1
+    position: relative
+    display: block
+    width: 5em
+    height: 1.5em
+    margin: 0
+    padding: 0
+    letter-spacing: 0
+    border: 0
+    background: none
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    &:focus
+      outline: none
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      right: 0
+      width: 40px
+      height: 1px
+      margin: -1px 0 0 0
+      opacity: 0.5
+      background: #000000
+      transform: scale3d(0.5,1,1)
+      transform-origin: top right
+      transition: transform 0.5s, opacity 0.5s
+      transition-timing-function: cubic-bezier(0.2,1,0.3,1)
+    // &:hover
+    //   cursor: pointer
+
+.pagination__item:not(.pagination__item--current):hover::before,
+.pagination__item:not(.pagination__item--current):focus::before
+  opacity: 1;
+  transform: scale3d(1,1,1);
+
+.pagination__item--current::before 
+  background: $font-color-light-red
+  height: 2px
+  opacity: 1;
+  transform: scale3d(1,1,1);
+
+
+// Style for card buttons
+.btn
+  &--size-card
+    width: 160px
+    font-size: 14px
+    padding-left: 45px
+  &--style-card
+    color: #fff
+    text-decoration: none
+    background-color: $font-color-light-red
+
