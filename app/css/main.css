@@ -768,7 +768,9 @@ html {
         -ms-flex-item-align: start;
             align-self: flex-start; }
 
-@media (min-width: 320px) {
+@media (min-width: 320px) and (max-width: 479px) {
+  .header__container {
+    overflow: hidden; }
   .header__logo {
     display: none; }
   .header__nav {
@@ -838,6 +840,27 @@ html {
     font-size: 14px;
     line-height: 26px;
     color: #8da5ba; }
+
+@media (min-width: 320px) and (max-width: 479px) {
+  .promo {
+    padding-top: 25px; }
+    .promo__container {
+      overflow: hidden; }
+  .promo__messages {
+    padding: 0;
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    max-width: 100%; }
+  .promo__title {
+    margin-top: 40px;
+    width: 100%;
+    font-size: 30px;
+    letter-spacing: 0;
+    white-space: nowrap;
+    text-align: center; }
+  .promo__descr {
+    width: 100%; } }
 
 .animate-start {
   position: absolute;

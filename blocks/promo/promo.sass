@@ -38,23 +38,25 @@
 
   
 
-// @media #$xxs}
-//   .promo
-//     padding-top: 25px
-//   .promo__messages
-//     padding: 0
-//     flex-basis: 100%
-//     max-width: 100%
-//   .promo__title 
-//     margin-top: 40px
-//     width: 100%
-//     font-size: 30px
-//     letter-spacing: 0
-//     white-space: nowrap
-//     text-align: center
-//   .promo__descr 
-//     width: 100%
-//     */
+@media #{$xxs} and (max-width: 479px)
+  .promo
+    padding-top: 25px
+    &__container
+      overflow: hidden
+  .promo__messages
+    padding: 0
+    flex-basis: 100%
+    max-width: 100%
+  .promo__title 
+    margin-top: 40px
+    width: 100%
+    font-size: 30px
+    letter-spacing: 0
+    white-space: nowrap
+    text-align: center
+  .promo__descr 
+    width: 100%
+  
 
 .animate-start
   position: absolute
