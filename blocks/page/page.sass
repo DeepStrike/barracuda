@@ -25,14 +25,20 @@ html
     margin-right: 12px;
     fill: #d60202
     vertical-align: middle
-  &--action-card // Style for card
+  &--action-card // Style for card cart
     position: absolute
     fill: #ffffff
     width: 17px
     height: 17px
     left: 23px
     top: 18px
-
+  &--info-card
+    position: absolute
+    fill: $font-color-light-red
+    width: 17px
+    height: 17px
+    left: 23px
+    top: 18px
 .btn 
   display: inline-block
   font: inherit
@@ -145,4 +151,25 @@ html
     color: #fff
     text-decoration: none
     background-color: $font-color-light-red
+    margin-bottom: 15px
+
+  &--style-card-border
+    background: none
+    border: 1px solid #ffffff
+
+
+// Style for page titles 
+
+.page-title
+  display: block 
+  width: 100%
+  margin: 0
+  text-align: center
+  margin-bottom: 20px
+  font-size: 30px
+  font-weight: 700
+  color: #202945
+  text-transform: uppercase
+  line-height: 1
+
 

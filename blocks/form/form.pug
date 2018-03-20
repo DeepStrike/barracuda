@@ -1,0 +1,24 @@
+mixin form() 
+  +b.SECTION.forms
+    +e.DIV.container
+      +b.FORM.form
+        +b.H3.page-title Форма реєстрації
+        +e.DIV.group
+          +b.LABEL(for="registration-name" class="sr-only") Імя
+          +b.INPUT.field.--text(type="text" id="registration-name" placeholder="Ім'я")
+          +b.LABEL(for="registration-email" class="sr-only") E-mail
+          +b.INPUT.field.--text(type="email" id="registration-email" placeholder="E-mail")
+        +e.DIV.group
+          +b.LABEL(for="registration-tel" class="sr-only") Телефон
+          +b.INPUT.field.--text(type="tel" id="registration-tel" placeholder="Телефон")
+          +b.LABEL(for="registration-organisation" class="sr-only") Організація 
+          +b.INPUT.field.--text(type="text" id="registration-organisation" placeholder="Організація")
+        +e.DIV.group
+          +b.SELECT.field
+            +b.OPTION(selected) Вид діяльності 
+            +b.OPTION Value 1
+            +b.OPTION Value 3
+          +b.LABEL(for="registration-date")
+          +b.INPUT.field(type="text" id="registration-date" placeholder="Дата") Дата
+        +b.TEXTAREA(placeholder="Повідомлення").area
+        +b.INPUT(type="submit" class="btn btn--send")

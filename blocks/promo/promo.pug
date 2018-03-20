@@ -8,12 +8,22 @@ mixin promo(data)
           +b.A.btn(class="--wide --gradient --color")= data.btn
             +e.I.arrow-left
       +e.DIV.img-wrap
-        +b.IMG(src="/img/hub.png" alt="Ajax hub")
+        +b.DIV.img-inner(class="flex-active"   data-slide="1")
+          +b.IMG(src="img/hub.png" alt="Ajax hub")
+        +b.DIV.img-inner(class="animate-start" data-slide="2")
+          +b.IMG(src="img/product/device_1.png" alt="")
+        +b.DIV.img-inner(class="animate-start" data-slide="3")
+          +b.IMG(src="img/product/device_2.png" alt="")
+        +b.DIV.img-inner(class="animate-start" data-slide="4")
+          +b.IMG(src="img/product/device_3.png" alt="")
+        +b.DIV.img-inner(class="animate-start" data-slide="5")
+          +b.IMG(src="img/product/device_1.png" alt="")
       - var n= 0
       +b.NAV.pagination(class="--wide")
         while n++ < data.numbersIndicator
-          +e.BUTTON.item 
-          if n === 2
-            +e.BUTTON.item(class="--current")
+          if n === 1
+            +e.BUTTON.item(class="--current" data-slide=`${n}`)
+          else
+            +e.BUTTON.item(data-slide=`${n}`)
 
 

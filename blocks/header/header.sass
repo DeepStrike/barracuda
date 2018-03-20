@@ -50,3 +50,14 @@
     color: $user-panel-color
     background-color: #f6f6f6
     align-self: flex-start
+
+@media #{$xxs} and (max-width: 479px)
+  .header
+    &__logo
+      display: none
+    &__nav
+      display: none
+    &__cart
+      display: none
+  .header
+    display: none

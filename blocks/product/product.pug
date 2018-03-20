@@ -2,7 +2,7 @@ mixin product(dataHead, dataBody)
   +b.SECTION.product
     +e.DIV.container
       +e.DIV.text-wrap
-        +e.H3.title= dataHead.title
+        +b.H3.page-title= dataHead.title
         +e.SPAN.subtitle= dataHead.subtitle
       +e.DIV.card-wrap
         each item in dataBody
@@ -10,9 +10,10 @@ mixin product(dataHead, dataBody)
             +e.DIV.img-wrap
               +b.IMG(src= item.srcImg)
               +e.DIV.shadow
-            +e.DIV.action
-              +b.A.btn(href="#" class="--size-card --style-card")= dataHead.nametrash
-                +icon("shopping-cart", "icon--action-card")
-              +b.A.btn(href="#" class="--size-card --style-card")= dataHead.details
+              +e.DIV.action
+                +b.A.btn(href="#" class="--size-card --style-card")= dataHead.nametrash
+                  +icon("shopping-cart", "icon--action-card")
+                +b.A.btn(href="#" class="--size-card --style-card --style-card-border")= dataHead.details
+                  +icon("information", "icon--info-card")
             +e.A(href="#").head-title= item.cardTitle
             +e.P.description= item.cardDescription

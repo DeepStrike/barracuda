@@ -55,6 +55,7 @@
     text-align: center
     overflow: hidden
     cursor: pointer
+    margin-bottom: 40px 
     img
       display: inline-block
       vertical-align: middle
@@ -82,12 +83,24 @@
     font-weight: 700
     color: #212121
     line-height: 22px
+    transition: 0.3s color ease
+    &:hover
+      color: $font-color-light-red
   &__description
     text-align: left
     font-size: 14px
     color: #8da5ba
     line-height: 1.6
+  
+  &__action
+    position: absolute
+    left: 50%
+    top: 50%
+    opacity: 0
+    transform: translate(-50%, -50%);
+    transition: .3s ease-in-out
 
 
-.card:hover .card__shadow
+.card__img-wrap:hover .card__shadow,
+.card__img-wrap:hover .card__action
   opacity: 1
